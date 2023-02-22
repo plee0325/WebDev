@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Flexbox 101</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+
+			}
+			nav {
+				background-color: blueviolet;
+				min-height: 50px;
+				display: flex;
+				flex-direction: row;
+			}
+			h1 {
+				flex: 1 1 20%;
+			}
+			nav {
+				flex: 1 1 80%;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav class="clearfix">
+				<h1 class="logo">kitties</h1> 
+				<ul>
+					<li><a href="#">Link 1</a></li>
+					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
+				</ul>	
+			</nav>
+		</header>
+	</body>
+</html>
