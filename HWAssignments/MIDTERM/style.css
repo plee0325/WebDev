@@ -5,6 +5,10 @@ html, body {
   box-sizing: border-box;
 }
 
+img {
+
+}
+
 #logo {
   font-family: "Montserrat Alternates";
   display: inline-block;
@@ -29,10 +33,15 @@ html, body {
 }
 
 .thumb {
-  margin: 5% 40%;
-  width: 20%;
+  margin: 5% 10%;
+  width: 80%;
 }
 
+.pictureofme {
+  margin: 50%;
+  width: 10px;
+
+}
 .center {
           display: block;
           margin-left: auto;
@@ -63,21 +72,7 @@ html, body {
     display: table;
     clear: both;
     }
-.container {
- display: grid;
- align-items: center; 
- grid-template-columns: 1fr;
- column-gap: 10px;
-}
 
-img {
-  max-width: 100%;
-  max-height:100%;
-}
-
-.text {
-  font-size: 70px;
-}
 header {
         width: 100%;
         background-color: #999;
@@ -126,7 +121,7 @@ h1 {
         text-decoration: none;
       }
       ul li a:hover { /* When hover, it creates black box and font color changes to */
-        background-color: black;
+        background-color: rgb(0,102,204,.7);
         color: white;
       }
 
@@ -135,7 +130,7 @@ h1 {
         text-align: center;
         padding: 10px 40px;
         text-decoration: none;
-        background-color: black;
+        background-color: rgb(204,0,0,.7);
         color: white;
       }
       /* Desktop mode first , this styles large screens by default
@@ -150,6 +145,8 @@ h1 {
       }
       .thumb {
         display: inline-block;
+        width:  30%;
+        margin: 10% 35%;
       }
       .thumb img {
         width: 100%;
@@ -183,26 +180,75 @@ h1 {
           font-size: 15px;
         }
         body {
-          background-color: green;
+          background-color: white;
         }
-        .thumb {
-        width: 100%;
-        margin: 0%;
-        }
-        .container {
-        width: 100%;
+        h2 {
+        font-family: "Montserrat Alternates";
+        text-align: CENTER;
+        font-size: 25px;
         }
 
-      }
+        .bg-text {
+          padding: 2px;
+         }
+        .thumb {
+        width: 60%;
+        margin: 10% 20%;
+        }
+
+        p {
+          font-size: 20px;
+        }
+        }
+
+
+      
       /* Mobile phones and smaller screens */
       @media only screen and (max-width: 768px) {
         body {
-          background-color: blue;
+          background-color: white;
         }
         .thumb {
-          width: 90%;
-          margin: 5%;
+          width: 30%;
+          margin: 35%;
         }
-        .container {
+        .column {
+          float: center;
           width: 100%;
         }
+        .bg-text {
+          background-color: none; 
+          background-color: none; 
+          color: black;
+          font-weight: bold;
+          border: none;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 2;
+          width: 70%;
+          padding: 10px;
+          text-align: CENTER;
+      }
+
+        .row:after {
+          content: none;
+          display: inline-block;
+          clear: none;
+        }
+        #ingredientsHeader {
+          font-family: "Montserrat Alternates";
+          display: inline-block;
+          text-align: center;
+          font-weight: bold;
+          font-size: 10;
+        }
+        #ingredients {
+          font-family: "Montserrat Alternates";
+          text-align: CENTER;
+          font-size: 30px;
+          margin: 30px;
+        }
+
+      }
