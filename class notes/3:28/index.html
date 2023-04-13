@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tip Calculator</title>
+</head>
+<body>
+	<form>
+	<!-- Every input should have a label -->
+		<label for = "bill">Bill:</label>
+		<input type="number" 
+			name="bill" 
+			id="bill" 
+			step="0.01" 
+			min="0" 
+			max="500"
+		/>
+		<p>Tip Amount</p>
+		<label for="tip">5%</label>
+		<input type="radio" name="tip" value="0.05"/>
+		<label for="tip">10%</label>
+		<input type="radio" name="tip" value="0.1"/>
+		<label for="tip">15%</label>
+		<input type="radio" name="tip" value="0.15"/>
+		<label for="tip">20%</label>
+		<input type="radio" name="tip" value="0.2"/>
+
+		<br />
+
+		<button id="tipBtn">Calculate Tip</button>
+	</form>
+
+	<div id="output"></div>
+
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function(){
+			// do all of this on load
+			document.getElementById('tipBtn').addEventListener('click', calcTip())
+		})
+
+		// Rounds the number to the nearest cent
+		function moneyRound(num) {
+			var roundNum = math.round(num*100)/100
+			return roundNum 
+		}
+
+		function calcTip() {
+			// grab output div for displaying results 
+			var result = document.getElementById('output')
+
+			// get the user inputed total bill value
+			var b = document.getElementById('bill').value
+			console.log(b, typeof(b))
+
+			b = parseFloat(b)
+			console.log(b, typeof(b))
+
+			// find the selected tip increment/percentage
+			var arrTip = document.getElementsByName('tip')
+			console.log(arrTip)
+
+		}
+
+
+
+	</script>
+</body>
+</html>
