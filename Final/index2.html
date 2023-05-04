@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Phil's Portfolio</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+	<link rel = "stylesheet" href = "style.css">
+</head>
+<body style ="background-color: black;">
+	<nav class="navbar navbar-expand-lg fixed-top navbarScroll">
+		<div class="container-fluid">
+			<a class = "navbar-brand align-self-end px-4" href = "#"></a>
+			<button 
+			class="navbar-toggler" 
+			type="button" 
+			data-bs-toggle="collapse" 
+			data-bs-target="#navbarNavDropdown" 
+			aria-controls="navbarNavDropdown" 
+			aria-expanded="false" 
+			aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class = "collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            	<ul class = "navbar-nav align-self-end px-4">
+            		<li class="nav-item active">
+            			<a class = "nav-link" href = "#home">Home</a>
+            		</li>
+            		<li class="nav-item">
+            			<a class = "nav-link" href = "#about">About/Contact Me</a>
+            		</li>
+            		<li class="nav-item">
+            			<a class = "nav-link" href = "#portfolio">Portfolio</a>
+            		</li>
+            	</ul>
+
+            </div>
+		</div>
+	</nav>
+	<section class = "bgimage" id="home">
+		<div class ="container">
+			<div class = "row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
+					<h2 id ="hero_title">Phil.</h2>
+					<script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+					<script type="text/javascript">
+
+						gsap.set("#hero_title", {x:0, y:0});
+
+
+						const flyIn = gsap.timeline();
+						flyIn.fromTo("#hero_title", {
+							x:1000,
+							y:-200,
+							rotation:720
+						}, {
+							delay:.5,
+							x:20,
+							y:0,
+							duration:1.5,
+							rotation:0,
+							ease:"back.out(2,10)"
+						});
+
+					</script>
+
+					<!-- <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+					<script>
+						var hero_title = document.getElementById("hero_title"),
+						arr = hero_title.innerText.split(""),
+						html = "";
+
+						for (var i = 0; i < arr.length; i++) {
+							if (arr[i] !== " ") {
+								html += '<div style = "position:relative;display:inline-block;">'+arr[i]+'</div>';
+
+							}else{
+								html += arr[i];
+							}
+						}
+
+						hero_title.innerHTML = html;
+
+						var chars = hero_title.getElementsByTagName("div");
+
+						var t1 = gsap.timeline({
+							repeat: -1,
+							repeatDelay: 1,
+							yoyo: true
+						})
+
+						t1.set("#hero_title", {perspective: 400});
+						t1.from(chars, {
+							duration:1.5,
+							opacity: 0,
+							x: gsap.utils.random(-300,300,true),
+							y: gsap.utils.random(50, 300, true),
+							x: gsap.utils.random(0,300,true),
+							stagger:{
+								amount: 3
+							}
+						})
+					</script> -->
+				<p class = "hero_desc">NYU Tandon Integrated Design and Media Student</p>
+			</div>
+			</div>
+		</div>
+	</section>
+	<section id = "about">
+		<h1 class="text-center">About Me</h1>
+		<div class= "container mt-4 pt-4">
+			<div class = "row mt-4">
+				<div class = "col-lg-4">
+					<img src = "imgs/face.jpg" class = "aboutMePic" alt="">
+				</div>
+				<div class="col-lg-8">
+					<p>Hello! My name is Philip Lee and I am currently a second semester Junior at NYU Tandon School of Engineering pursuing an Integrated Design and Media degree. With the aspirations of being a creator, I am currently attending these classes that peak my interest: Motion Graphics, 3D Modeling, and Sound Design. As a musician, Sound Design is something that I have always been interested and am learning more and more about every class. 3D Modeling is something I definitely did not see myself doing in the future until I started taking the class which has revealed to me that I enjoy the art. Finally, Motion Graphics is what stands out to me as I have always loved editing videos and want to take a step further in making effects and taking my traditional video editing to the next level. Please enjoy my this website made up of projects from school and my personal life that accurately depicts what my passions are.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+<section id="portfolio">
+	<div id = "portfolioCarousel" class = "carousel slide">
+		<div class = "carousel-indicators">
+			<button
+			type = "button"
+			data-bs-target = "#portfolioCarousel"
+			data-bs-slide-to = "0"
+			class = "active"
+			aria-current="true"
+			aria-label="Slide 1">
+			<i class = "bi-alarm"></i>
+			</button>
+			<button
+			type = "button"
+			data-bs-target = "#portfolioCarousel"
+			data-bs-slide-to = "1"
+			aria-label="Slide 2">
+			</button>
+			<button
+			type = "button"
+			data-bs-target = "#portfolioCarousel"
+			data-bs-slide-to = "2"
+			aria-label="Slide 3">
+			</button>
+			<button
+			type = "button"
+			data-bs-target = "#portfolioCarousel"
+			data-bs-slide-to = "3"
+			aria-label="Slide 4">
+			</button>
+			<button
+			type = "button"
+			data-bs-target = "#portfolioCarousel"
+			data-bs-slide-to = "4"
+			aria-label="Slide 5">
+			</button>
+		</div>
+		<div class = "carousel-inner">
+			<div class = "carousel-item active">
+				<a href="https://youtu.be/nUFi2kl8sN8" target="_blank">
+          					<img class="d-block w-100" src="imgs/thumbnailTitleSeq.png" alt="First slide">
+        </a>
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Motion Graphics (Mornings for Chenny)</h5>
+            <p>Short film created for Motion Graphics class. The objective of this project was to create a title sequence for a parody of a movie or a completely original film.</p>
+        </div>
+			</div>
+			<div class = "carousel-item">
+				<a href="https://youtu.be/R6nTMENQtU8" target="_blank">
+          					<img class="d-block w-100" src="imgs/thumbnailKineticTxt.png" alt="Second slide">
+        				</a>
+        		<div class="carousel-caption d-none d-md-block">
+            	<h5>Motion Graphics (Memes I Ate Up As A Kid And Still Do)</h5>
+            	<p>Short created for Motion Graphics class. The objective of this project was to create kinetic text for a song/speech/or any piece with dialogue</p>
+          	</div>
+			</div>
+			<div class = "carousel-item">
+				<a href="https://youtu.be/N6nxujSwDBI" target="_blank">
+          					<img class="d-block w-100" src="imgs/thumbnailLemonade.png" alt="Third slide">
+        				</a>
+        			<div class="carousel-caption d-none d-md-block">
+            	<h5>Music (Lemonade Cover)</h5>
+            	<p>Project I made in high school, where I was getting used to using Logic Pro, my audio interface, and mixing in general.</p>
+          	</div>
+			</div>
+			<div class = "carousel-item">
+				<a href="https://drive.google.com/file/d/118WUxq8DJ6b45fAUsXXPobnMGbYQ4HnT/view?usp=share_link" target="_blank">
+          					<img class="d-block w-100" src="imgs/son.png" alt="Third slide">
+        				</a>
+        			<div class="carousel-caption d-none d-md-block">
+            	<h5>Video Editing Project (Son Heung Min)</h5>
+            	<p>Project I made last year. After Son Heung Min was Top Scorer in the English Premier League, I decided to create a highlight reel of all his 23 goals.</p>
+          	</div>
+			</div>
+			<div class = "carousel-item">
+				<a href="https://drive.google.com/file/d/1qA32CO7lkVvstfoc9S3yYIyk4BJk-hht/view?usp=sharing" target="_blank">
+          					<img class="d-block w-100" src="imgs/knife.png" alt="Third slide">
+        				</a>
+        			<div class="carousel-caption d-none d-md-block">
+            	<h5>3D Model(Butterfly Knife)</h5>
+            	<p>For my 3D Modeling class, I made a 3D Model of a butterfly knife.</p>
+          	</div>
+			</div>
+		</div>
+		<button
+		class = "carousel-control-prev"
+		type = "button"
+		data-bs-target = "#portfolioCarousel"
+		data-bs-slide = "prev">
+		<span class = "carousel-control-prev-icon" aria-hidden = "true"></span>
+			<span class = "visually-hidden">Previous</span>
+		</button>
+		<button
+		class = "carousel-control-next"
+		type = "button"
+		data-bs-target = "#portfolioCarousel"
+		data-bs-slide = "next">
+			<span class = "carousel-control-next-icon" aria-hidden = "true"></span>
+			<span class = "visually-hidden">Next</span>
+		</button>
+	</div>
+
+<!--   <div id="portfolioCarousel" class="carousel slide" data-ride="carousel">
+  	<ol class="carousel-indicators">
+      <li data-target="#portfolioCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#portfolioCarousel" data-slide-to="1"></li>
+      <li data-target="#portfolioCarousel" data-slide-to="2"></li>
+    </ol>
+    		<div class="carousel-inner">
+      			<div class="carousel-item active">
+        				<a href="https://youtu.be/nUFi2kl8sN8" target="_blank">
+          					<img class="d-block w-100" src="imgs/thumbnailTitleSeq.png" alt="First slide">
+        				</a>
+        			<div>
+          				<h3>Motion Graphics (Mornings for Chenny)</h3>
+          				<p>Short film created for Motion Graphics class. The objective of this project was to create a title sequence for a parody of a movie or a completely original film.</p>
+        			</div>
+      			</div>
+      			<div class="carousel-item">
+        				<a href="https://youtu.be/R6nTMENQtU8" target="_blank">
+          					<img class="d-block w-100" src="imgs/thumbnailKineticTxt.png" alt="Second slide">
+        				</a>
+        				<div>
+          					<h3>Motion Graphics (Memes I Ate Up As A Kid And Still Do)</h3>
+          					<p>Short film created for Motion Graphics class. The objective of this project was to create a title sequence for a parody of a movie or a completely original film.</p>
+        				</div>
+      			</div>
+    		</div>
+    		<a class="carousel-control-prev" href="#portfolioCarousel" role="button" data-slide="prev">
+      			<span class="glyphicon glyphicon-chevron-left"></span>
+      			<span class="sr-only">Previous</span>
+    		</a>
+    		<a class="carousel-control-next" href="#portfolioCarousel" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+				<span class="sr-only">Next</span>
+			</a>
+  </div>
+ -->
+
+</section>
+
+
+
+
+</body>
+</html>
